@@ -1,7 +1,7 @@
 {
   "name": "biojs-rest-nextprot",
   "description": "Client library that interfaces the neXtProt REST API (https://api.nextprot.org) which contains a comprehensive set of human proteins",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/calipho-sib/biojs-rest-nextprot",
   "author": {
     "name": "CALIPHO team at SIB Swiss Institute of Bioinformatics",
@@ -21,12 +21,6 @@
     }
   ],
   "main": "lib/index.js",
-  "scripts": {
-		"test": "echo 'Error: no test specified' && exit 1",
-		"build": "mkdirp build && browserify -r ./:biojs-rest-nextprot -o build/nextprot.js",
-		"build-browser": "npm run build",
-		"install": "npm run build"
-  },
   "dependencies": {
     "nets": "^1.0.0"
   },
