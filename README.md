@@ -30,18 +30,26 @@ nextprot.getProteinBlock('NX_P01308', 'isoform', function (data) {
 **Type**: `String`
 **Example**: `overview`, `isoform`, ...   //A full of different blocks can be seen in https://api.nextprot.org under Entry 
 
-The 'getProteinBlock' method is responsible for showing a name.
+**Parameter**: `callback`
+**Type**: `Function`
+
+The 'getProteinBlock' method is responsible for requesting the nextprot api for the given protein.
 
 How to use this method
 
 ```javascript
+var nextprot = require("biojs-rest-nextprot");
+
+nextprot.getProteinBlock('NX_P01308', 'isoform', function (data) {
+    data.entry.isoforms.map(function (i) {
+        console.log(i.sequence)
+    })
+});
+
+//Will print out the sequence of the protein P01308 (insulin)
 MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN
 
 ```
-
-## Contributing
-
-All contributions are welcome.
 
 ## Support
 
