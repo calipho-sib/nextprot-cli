@@ -28,5 +28,5 @@
 		"mkdirp": "^0.5.0",
 		"browserify": "6.x"
   }, 
-  "keywords": ["nextprot","human","proteins","uniprot","rest","api","proteomics","proteome","genome","biojs"]
+  "keywords": ["sib", "isb", "calipho", "nextprot","human","proteins","uniprot","rest","api","proteomics","proteome","genome","biojs"]
 }
