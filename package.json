@@ -1,7 +1,7 @@
 {
-  "name": "biojs-rest-nextprot",
-  "description": "Client library that interfaces the neXtProt REST API (https://api.nextprot.org) which contains a comprehensive set of human proteins",
-  "version": "0.1.1",
+  "name": "nextprot-api-cli",
+  "description": "neXtProt client api (https://api.nextprot.org). neXtProt contains a comprehensive set of human protein knowledge and it is free to access",
+  "version": "0.2.0",
   "homepage": "https://github.com/calipho-sib/biojs-rest-nextprot",
   "author": {
     "name": "CALIPHO team at SIB Swiss Institute of Bioinformatics",
