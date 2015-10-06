@@ -1,4 +1,4 @@
-# biojs-rest-nextprot
+# nextprot-cli
 
 [![NPM version](http://img.shields.io/npm/v/biojs-rest-nextprot.svg)](https://www.npmjs.org/package/biojs-rest-nextprot) 
 
@@ -10,7 +10,7 @@ Install the module with:
 npm install nextprot-api-cli
 ```
 
-Import the module in your code and provide some information about your application
+Import the module in your code and provide some information about your application:
 ```javascript
 var NextProtClient = require("nextprot-api-cli");
 
@@ -20,7 +20,7 @@ var clientInformation = "Calipho group at SIB";
 var nx = new NextProtClient(applicationName, clientInformation);
 ```
 
-Once you have initialized the object you can either request the API directly:
+Once you have initialized the object you can either request the API directly in the following manner:
 ```javascript
 //Refer to http://snorql.nextprot.org for more example queries
 nx.getProteinBlock('NX_P01308', 'isoform', function (data) {
@@ -35,7 +35,7 @@ MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPL
 
 
 
-Or run a SPARQL query agains the neXtProt endpoint (snorql.nextprot.org) for more examples
+Or run a SPARQL query agains the neXtProt SPARQL endpoint. See https://snorql.nextprot.org for more examples
 ```javascript
 
 var chromosome = 13;
