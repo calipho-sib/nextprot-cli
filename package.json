@@ -1,6 +1,6 @@
 {
   "name": "nextprot-cli",
-  "description": "neXtProt client used in command line interface. It can communicate with the neXtProt api (https://api.nextprot.org) as well as with the SPARQL endpoint (https://snorql.nextprot.org). neXtProt contains a comprehensive set of human protein knowledge and it is free to access",
+  "description": "neXtProt API and SPARQL client (for node command line interface)",
   "version": "0.3.0",
   "homepage": "https://github.com/calipho-sib/nextprot-cli",
   "author": {
