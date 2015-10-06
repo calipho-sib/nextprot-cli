@@ -10,6 +10,7 @@ var chromosome = process.argv[2] || 'Y';
 
 console.log("Querying chromosome " + chromosome);
 
+//Refer to http://snorql.nextprot.org for more example queries
 var sparqlQuery = 'select distinct ?entry where { ?entry :gene / :chromosome "'+ chromosome +'"^^xsd:string}'
 
 function getCSVRepresentation(results) {

@@ -2,45 +2,28 @@
 
 [![NPM version](http://img.shields.io/npm/v/biojs-rest-nextprot.svg)](https://www.npmjs.org/package/biojs-rest-nextprot) 
 
-> Client library that interfaces the neXtProt REST API which contains a comprehensive set of human proteins
+> Javascript library for the neXtProt API (https://api.nextprot.org). neXtProt contains a comprehensive set of human proteins knwoledge.
 
 ## Getting Started
-Install the module with: `npm install biojs-rest-nextprot`
-
-```javascript
-
-var nextprot = require("biojs-rest-nextprot");
-
-nextprot.getProteinBlock('NX_P01308', 'isoform', function (data) {
-    data.entry.isoforms.map(function (i) {
-        console.log(i.sequence)
-    })
-});
+Install the module with: 
+```shell
+npm install nextprot-api-cli
 ```
 
-## Documentation
-
-#### .getProteinBlock(entryName, block, callback)
-
-**Parameter**: `entryName`
-**Type**: `String`
-**Example**: `NX_P01308` corresponds to insulin (NX_P01308) 
-
-**Parameter**: `block`
-**Type**: `String`
-**Example**: `overview`, `isoform`, ...   //A full of different blocks can be seen in https://api.nextprot.org under Entry 
-
-**Parameter**: `callback`
-**Type**: `Function`
-
-The 'getProteinBlock' method is responsible for requesting the nextprot api for the given protein.
-
-How to use this method
-
+Import the module in your code and provide some information about your application
 ```javascript
-var nextprot = require("biojs-rest-nextprot");
+var NextProtClient = require("nextprot-api-cli");
 
-nextprot.getProteinBlock('NX_P01308', 'isoform', function (data) {
+//neXtProt is free to use but we appreciate some information about your application and who you are :)
+var applicationName = "get-proteins-sequence.js (node app that shows how to query the neXtProt API)";
+var clientInformation = "Calipho group at SIB";
+var nx = new NextProtClient(applicationName, clientInformation);
+```
+
+Once you have initialized the object you can either request the API directly:
+```javascript
+//Refer to http://snorql.nextprot.org for more example queries
+nx.getProteinBlock('NX_P01308', 'isoform', function (data) {
     data.entry.isoforms.map(function (i) {
         console.log(i.sequence)
     })
@@ -48,8 +31,25 @@ nextprot.getProteinBlock('NX_P01308', 'isoform', function (data) {
 
 //Will print out the sequence of the protein P01308 (insulin)
 MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN
+```
+
+
+
+Or run a SPARQL query agains the neXtProt endpoint (snorql.nextprot.org) for more examples
+```javascript
+
+var chromosome = 13;
+var sparqlQuery = 'select distinct ?entry where { ?entry :gene / :chromosome "'+ chromosome +'"^^xsd:string}'
+
+nx.executeSPARQL(sparqlQuery, function(data) {
+	console.log("Found " + data.results.bindings.length + " entries: ");
+});
 
 ```
+
+You can even combine both...
+
+Look at the examples folder for working code.
 
 ## Support
 
