@@ -1,13 +1,18 @@
 # nextprot-cli
 
-[![NPM version](http://img.shields.io/npm/v/biojs-rest-nextprot.svg)](https://www.npmjs.org/package/biojs-rest-nextprot) 
+[![NPM version](http://img.shields.io/npm/v/nextprot-cli.svg)](https://www.npmjs.org/package/nextprot-cli) 
 
-> Javascript library for the neXtProt API (https://api.nextprot.org). neXtProt contains a comprehensive set of human proteins knwoledge.
+Javasript Client of neXtProt (https://search.nextprot.org). 
+
+neXtProt contains a comprehensive set of human proteins knwoledge.
+
+This module contains methods to access the neXtProt API (https://api.nextprot.org) as well as the SPARQL endpoint (http://snorql.nextprot.org). 
+
 
 ## Getting Started
 Install the module with: 
 ```shell
-npm install nextprot-api-cli
+npm install nextprot-cli
 ```
 
 Import the module in your code and provide some information about your application:
@@ -53,7 +58,7 @@ Look at the examples folder for working code.
 
 ## Support
 
-If you have any problem or suggestion please open an issue [here](https://github.com/calipho-sib/biojs-rest-nextprot/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/calipho-sib/nextprot-cli/issues).
 
 ## License 
 This software is licensed under the GNU GPL v2 license, quoted below.
