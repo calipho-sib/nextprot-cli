@@ -1,4 +1,4 @@
-var NextProtClient = require("nextprot-api-cli");
+var NextProtClient = require("nextprot-cli");
 //var NextProtClient = require("../lib/index.js"); //For development
 
 //neXtProt is free to use but we appreciate some information about your application and who you are :)

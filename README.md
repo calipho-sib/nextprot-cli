@@ -12,7 +12,7 @@ npm install nextprot-api-cli
 
 Import the module in your code and provide some information about your application:
 ```javascript
-var NextProtClient = require("nextprot-api-cli");
+var NextProtClient = require("nextprot-cli");
 
 //neXtProt is free to use but we appreciate some information about your application and who you are :)
 var applicationName = "get-proteins-sequence.js (node app that shows how to query the neXtProt API)";
