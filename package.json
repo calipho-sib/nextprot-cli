@@ -1,23 +1,23 @@
 {
   "name": "nextprot-cli",
-  "description": "neXtProt client api (https://api.nextprot.org). neXtProt contains a comprehensive set of human protein knowledge and it is free to access",
+  "description": "neXtProt client used in command line interface. It can communicate with the neXtProt api (https://api.nextprot.org) as well as with the SPARQL endpoint (https://snorql.nextprot.org). neXtProt contains a comprehensive set of human protein knowledge and it is free to access",
   "version": "0.3.0",
-  "homepage": "https://github.com/calipho-sib/nextprot-api-cli",
+  "homepage": "https://github.com/calipho-sib/nextprot-cli",
   "author": {
     "name": "CALIPHO team at SIB Swiss Institute of Bioinformatics",
     "email": "support@nextprot.org"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/calipho-sib/biojs-rest-nextprot.git"
+    "url": "git://github.com/calipho-sib/nextprot-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/calipho-sib/biojs-rest-nextprot/issues"
+    "url": "https://github.com/calipho-sib/nextprot-cli/issues"
   },
   "licenses": [
     {
       "type": "GNU GPL v2",
-      "url": "https://github.com/ddtxra/biojs-rest-nextprot/blob/master/LICENSE"
+      "url": "https://github.com/calipho-sib/nextprot-cli/blob/master/LICENSE"
     }
   ],
   "main": "lib/index.js",
