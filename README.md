@@ -27,7 +27,7 @@ var nx = new NextProtClient(applicationName, clientInformation);
 
 Once you have initialized the object you can either request the API directly in the following manner:
 ```javascript
-//Refer to http://snorql.nextprot.org for more example queries
+//Refer to API (https://api.nextprot.org) to get an extensive list of possible protein blocks
 nx.getProteinBlock('NX_P01308', 'isoform', function (data) {
     data.entry.isoforms.map(function (i) {
         console.log(i.sequence)
@@ -44,6 +44,7 @@ Or run a SPARQL query agains the neXtProt SPARQL endpoint. See https://snorql.ne
 ```javascript
 
 var chromosome = 13;
+//Refer to http://snorql.nextprot.org for more example queries
 var sparqlQuery = 'select distinct ?entry where { ?entry :gene / :chromosome "'+ chromosome +'"^^xsd:string}'
 
 nx.executeSPARQL(sparqlQuery, function(data) {
