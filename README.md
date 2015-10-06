@@ -15,13 +15,14 @@ Install the module with:
 npm install nextprot-cli
 ```
 
+Create a file, for example test-nextprot.js and write some javascript code:
 Import the module in your code and provide some information about your application:
 ```javascript
 var NextProtClient = require("nextprot-cli");
 
 //neXtProt is free to use but we appreciate some information about your application and who you are :)
-var applicationName = "get-proteins-sequence.js (node app that shows how to query the neXtProt API)";
-var clientInformation = "Calipho group at SIB";
+var applicationName = "my test application";
+var clientInformation = "Student at UNIGE";
 var nx = new NextProtClient(applicationName, clientInformation);
 ```
 
@@ -34,13 +35,12 @@ nx.getProteinBlock('NX_P01308', 'isoform', function (data) {
     })
 });
 
+//node test-nextprot.js
 //Will print out the sequence of the protein P01308 (insulin)
 MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN
 ```
 
-
-
-Or run a SPARQL query agains the neXtProt SPARQL endpoint. See https://snorql.nextprot.org for more examples
+Or run a SPARQL query against the neXtProt SPARQL endpoint. See https://snorql.nextprot.org for more examples
 ```javascript
 
 var chromosome = 13;
@@ -48,14 +48,15 @@ var chromosome = 13;
 var sparqlQuery = 'select distinct ?entry where { ?entry :gene / :chromosome "'+ chromosome +'"^^xsd:string}'
 
 nx.executeSPARQL(sparqlQuery, function(data) {
-	console.log("Found " + data.results.bindings.length + " entries: ");
+	console.log("Found " + data.results.bindings.length + " entries ");
 });
 
+//node test-nextprot.js
+//Will print the number of entries that have a gene on chromosome 13
+Found 328 entries
 ```
 
-You can even combine both...
-
-Look at the [examples](examples) folder for working code.
+You can even combine both (API and SPARQL), look at the [examples](examples) folder for working code.
 
 ## Support
 
