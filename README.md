@@ -54,7 +54,7 @@ nx.executeSPARQL(sparqlQuery, function(data) {
 
 You can even combine both...
 
-Look at the examples folder for working code.
+Look at the [examples](examples) folder for working code.
 
 ## Support
 
