@@ -13,7 +13,7 @@ MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPL
 
 ### Gets the list of proteins who have a gene expressed on a chromosome (passed as argument)
 ```shell
-node ./node_modules/nextprot-cli/examples/get-proteins-by-chromosome.js Y
+node get-proteins-by-chromosome.js Y
 
 Querying chromosome Y
 Found 48 entries:
@@ -25,7 +25,7 @@ NX_Q9BY66,NX_Q9BQ87,NX_Q9BZA8,NX_Q99218,NX_Q9Y6F7,NX_Q9BZA5,NX_Q96LI6,NX_Q9Y6F8,
 ### Gets the name and the different locations of a protein accession passed as argument 
 
 ```shell
-node ./node_modules/nextprot-cli/examples/get-tissues-for-entry.js NX_P51587
+node get-tissues-for-entry.js NX_P51587
 
 Querying cellular components for Breast cancer type 2 susceptibility protein (BRCA2) [NX_P51587]:
 
