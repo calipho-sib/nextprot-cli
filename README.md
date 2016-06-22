@@ -1,10 +1,15 @@
-# nextprot-cli
+# neXtProt - The knowledge resource on human proteins
+
+This is a code repository for the SIB - Swiss Institute of Bioinformatics CALIPHO group neXtProt project
+
+See: http://www.nextprot.org/
+
+# neXtProt javascript client
+
 
 [![NPM version](http://img.shields.io/npm/v/nextprot-cli.svg)](https://www.npmjs.org/package/nextprot-cli) 
 
-Javasript Client of neXtProt (https://search.nextprot.org). 
-
-neXtProt contains a comprehensive set of human proteins knwoledge.
+Javascript client for neXtProt
 
 This module contains methods to access the neXtProt API (https://api.nextprot.org) as well as the SPARQL endpoint (http://snorql.nextprot.org). 
 
